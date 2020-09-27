@@ -6,4 +6,5 @@
     <color name="nuevo">#290208</color>
     <color name="nuevo2">#5394F1</color>
     <color name="TEXT">#000104</color>
+    <color name="white">FFFFFFFF</color>
 </resources>
