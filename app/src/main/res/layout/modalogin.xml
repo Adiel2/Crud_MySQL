@@ -72,10 +72,10 @@
                             android:id="@+id/BtnCerrar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_close4"
-                            android:layout_marginRight="7dp"
+                            android:src="@drawable/ic_close"
+                            android:layout_marginRight="10dp"
                             android:layout_alignParentRight="true"
-                            android:background="@drawable/circulo2" />
+                            android:background="#FFFF" />
 
                     </LinearLayout>
 
@@ -147,9 +147,9 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="10dp"
                         android:text="start"
-                        android:textColor="#033b7c"
+                        android:textColor="#FFFFFF"
                         android:textStyle="bold"
-                        android:background="@drawable/btn_mov1"
+                        android:background="@drawable/ic_precio"
                         android:layout_gravity="center_horizontal"
                         />
 
