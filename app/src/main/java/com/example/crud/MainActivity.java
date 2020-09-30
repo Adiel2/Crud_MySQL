@@ -1,6 +1,7 @@
 package com.example.crud;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     ConexionSQLite conexion = new ConexionSQLite(this);
     Dto datos = new Dto();
     AlertDialog.Builder dialogo;
+    modal_Toast_Custom modal= new modal_Toast_Custom();
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 confirmacion();
             }
         });
-        FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab_label);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -163,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
             Intent listViewActivity = new Intent(MainActivity.this, ListViewArticulos.class);
             startActivity(listViewActivity);
             return true;
+        
         }
         return super.onOptionsItemSelected(item);
     }

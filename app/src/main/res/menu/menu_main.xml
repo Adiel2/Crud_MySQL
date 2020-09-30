@@ -7,20 +7,27 @@
         android:title="BORRAR DATOS"
         android:icon="@drawable/ic_money"
         android:orderInCategory="1"
-        app:showAsAction="never"
+        app:showAsAction="always"
         />
     <item
         android:id="@+id/action_listaArticulos"
         android:title="LISTAR DATOS "
         android:icon="@drawable/ic_money"
         android:orderInCategory="1"
-        app:showAsAction="never"
+        app:showAsAction="always"
         />
     <item
         android:id="@+id/action_listaArticulos1"
         android:title="LISTAR DATOS 1 "
         android:icon="@drawable/ic_money"
         android:orderInCategory="1"
-        app:showAsAction="never"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/acercade"
+        android:title="acerca de"
+        android:icon="@drawable/buttonstyle1"
+        android:orderInCategory="1"
+        app:showAsAction="always"
         />
 </menu>

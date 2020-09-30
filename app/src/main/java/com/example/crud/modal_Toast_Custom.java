@@ -259,7 +259,7 @@ public class modal_Toast_Custom extends AppCompatActivity{
     public void dialogAbout(final Context context) {
         //dialogo1 = new AlertDialog.Builder(context);
         myDialog = new Dialog(context);
-        myDialog.setContentView(R.layout.dialog_autor);
+        myDialog.setContentView(R.layout.acercade);
         myDialog.setCancelable(false);
 
         ImageView BtnCerrarAutor = myDialog.findViewById(R.id.BtnCerrarAutor);
