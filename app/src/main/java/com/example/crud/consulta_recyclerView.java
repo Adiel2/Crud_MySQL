@@ -14,7 +14,7 @@ public class consulta_recyclerView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
-        recycler = (RecyclerView)findViewById(R.id.rview);
+        recycler = (RecyclerView)findViewById(R.id.review);
 // Esta línea mejora el rendimiento, si sabemos que el contenido
 // no va a afectar al tamaño del RecyclerView
         recycler.setHasFixedSize(true);

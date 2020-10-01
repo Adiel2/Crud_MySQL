@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.crud.MainActivity">
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,45 +20,53 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main" />
-
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_vertical"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_search" />
     <com.github.clans.fab.FloatingActionMenu
-    android:id="@+id/menu_fab"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom|end">
-
-    <com.github.clans.fab.FloatingActionButton
-        android:id="@+id/item1"
+        android:id="@+id/menu_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_back"
-        app:backgroundTint="#FFFF"
-        app:borderWidth="0dp"
-        app:fab_label="Retornar"
-        app:fab_size="mini"/>
+        android:layout_gravity="bottom|end">
 
-    <com.github.clans.fab.FloatingActionButton
-        android:id="@+id/item2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_person"
-        app:backgroundTint="#FFFF"
-        app:borderWidth="0dp"
-        app:fab_label="Autor"
-        app:fab_size="mini"/>
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            app:backgroundTint="#FFFF"
+            app:borderWidth="0dp"
+            app:fab_label="Retornar"
+            app:fab_size="mini"/>
 
-    <com.github.clans.fab.FloatingActionButton
-        android:id="@+id/item3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_close"
-        app:backgroundTint="#FFFF"
-        app:borderWidth="0dp"
-        app:fab_label="salir"
-        app:fab_size="mini"/>
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_person"
+            app:backgroundTint="#FFFF"
+            app:borderWidth="0dp"
+            app:fab_label="Autor"
+            app:fab_size="mini"/>
 
-</com.github.clans.fab.FloatingActionMenu>
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            app:backgroundTint="#FFFF"
+            app:borderWidth="0dp"
+            app:fab_label="salir"
+            app:fab_size="mini"/>
+
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

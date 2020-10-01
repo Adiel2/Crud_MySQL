@@ -21,6 +21,8 @@
         android:textColor="#AD0505"
         android:textSize="18dp" />
 
+
+
     <Spinner
         android:id="@+id/sp_options"
         android:layout_width="fill_parent"
@@ -71,6 +73,12 @@
             android:text="Precio: "
             android:textColor="#AD0505"
             android:textSize="18dp" />
+
+
+
     </RelativeLayout>
+
+
+
 
 </LinearLayout>

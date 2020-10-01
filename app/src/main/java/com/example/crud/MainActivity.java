@@ -8,6 +8,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
+
+import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.annotation.RequiresApi;
@@ -38,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
     Dto datos = new Dto();
     AlertDialog.Builder dialogo;
     modal_Toast_Custom modal= new modal_Toast_Custom();
+    Acerca_de acer = new Acerca_de();
+
+    private FloatingActionMenu menu;
+    private com.github.clans.fab.FloatingActionButton item1, item2, item3;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -73,7 +79,59 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setSubtitleTextColor(getResources().getColor(R.color.TEXT));
         toolbar.setTitle("CRUD");
         setSupportActionBar(toolbar);
+
+        menu = findViewById(R.id.menu_fab);
+        item1 = findViewById(R.id.item1);
+        item2 = findViewById(R.id.item2);
+        item3 = findViewById(R.id.item3);
+
+        menu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
+            @Override
+            public void onMenuToggle(boolean opened) {
+                if (opened){
+                    Toast.makeText(MainActivity.this, "Menu Abierto",Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(MainActivity.this, "Menu Cerrado", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (menu.isOpened()) {
+                    menu.close(true);
+                }
+            }
+        });
+
+        item1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        item2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Acerca_de.class);
+                startActivity(intent);
+            }
+        });
+
+
+        item3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                finish();
+            }
+        });
+
+
 //y esto para pantalla completa (oculta incluso la barra de estado)
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -82,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 confirmacion();
             }
         });
-        FloatingActionButton fab = findViewById(R.id.fab_label);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
                 ventanas.Search(MainActivity.this);
             }
         });
+
+
         et_codigo = (EditText) findViewById(R.id.et_codigo);
         et_descripcion = (EditText) findViewById(R.id.et_descripcion);
         et_precio = (EditText) findViewById(R.id.et_precio);
@@ -123,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
         }catch (Exception e){
         }
     }
+
     private void confirmacion(){
         String mensaje = "¿Realmente desea salir?";
         dialogo = new AlertDialog.Builder(MainActivity.this);
@@ -167,6 +228,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(listViewActivity);
             return true;
         
+        }else if(id == R.id.acercade) {
+            Intent listViewActivity = new Intent(MainActivity.this, Acerca_de.class);
+            startActivity(listViewActivity);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
