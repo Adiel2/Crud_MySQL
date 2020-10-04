@@ -228,10 +228,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(listViewActivity);
             return true;
         
-        }else if(id == R.id.acercade) {
-            Intent listViewActivity = new Intent(MainActivity.this, Acerca_de.class);
-            startActivity(listViewActivity);
-            return true;
         }
         return super.onOptionsItemSelected(item);
     }
